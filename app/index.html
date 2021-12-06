@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.min.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <div class="allMoney">
+            <span>Деньги банка в <input class="choiceFirst" list="currency">:</span>
+            <div class="resultAllSum"></div>
+        </div>
+
+        <div class="allDebt">
+            <span>Долг банка в <input class="choiceSecond" list="currency"> :</span>
+            <div class="resultArrears"></div>
+            <datalist id="currency">
+                <option>USD</option>
+                <option>UAH</option>
+                <option>RUR</option>
+                <option>EUR</option>
+            </datalist>
+        </div>
+
+        <div class="amountClients">
+            <span>Кол-во <input class="amount" list="amount"> клиентов</span>
+            <div class="resultAmountClient"></div>
+            <span> должны банку: </span>
+            <div class="resultSumClient"></div>
+            <datalist id="amount">
+                <option>active</option>
+                <option>not active</option>
+            </datalist>
+            <datalist id="currency">
+                <option>USD</option>
+                <option>UAH</option>
+                <option>RUR</option>
+                <option>EUR</option>
+            </datalist>
+        </div>
+    </header>
+
+    <div class="main">
+        <button class="add"></button>
+        <div class="blockClients"></div>
+    </div>
+
+    <div class="modalInfo">
+        <div class="modalContainer"></div>
+    </div>
+
+    <div class="modalInfo EditClient">
+        <div class="modalContainerEditClient"></div>
+    </div>
+
+    <div class="modalInfo EditCard">
+        <div class="modalContainerEditCard"></div>
+    </div>
+
+    <script src="scriptsJS/billsDOM.js"></script>
+    <script src="scriptsJS/clientsDOM.js"></script>
+    <script src="scriptsJS/bankDOM.js"></script>
+
+</body>
+</html>
